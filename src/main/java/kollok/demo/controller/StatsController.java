@@ -19,16 +19,16 @@ public class StatsController {
         this.statsService = statsService;
     }
 
-//    @GetMapping
-//    public ResponseEntity<StatsResponse> getStats() {
-//        StatsResponse stats = statsService.getStats();
-//        return ResponseEntity.ok(stats);
-//    }
-
     @GetMapping
-    public String getStats() {
-        return "tvft";
+    public ResponseEntity<StatsResponse> getStats() {
+        StatsResponse stats = statsService.getStats();
+        return ResponseEntity.ok(stats);
     }
+
+//    @GetMapping
+//    public String getStats() {
+//        return "tvft";
+//    }
 
 
 }
