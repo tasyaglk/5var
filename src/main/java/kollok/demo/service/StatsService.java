@@ -7,9 +7,7 @@ import kollok.demo.request.StatsResponse;
 public class StatsService {
 
     public StatsResponse getStats() {
-        // Logic to calculate and retrieve the health stats
         StatsResponse stats = new StatsResponse();
-        // Set the calculated stats values
         return stats;
     }
 }

@@ -7,6 +7,5 @@ import kollok.demo.request.SleepRequest;
 public class SleepService {
 
     public void addSleep(SleepRequest request) {
-        // Logic to process and store the sleep data
     }
 }

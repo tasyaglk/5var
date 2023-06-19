@@ -7,6 +7,5 @@ import kollok.demo.request.NutritionRequest;
 public class NutritionService {
 
     public void addNutrition(NutritionRequest request) {
-        // Logic to process and store the nutrition data
     }
 }

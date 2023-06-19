@@ -15,24 +15,24 @@ import kollok.demo.service.ActivityService;
 @RequestMapping(path = "/activity")
 public class ActivityController {
 
-    @PostMapping
-    public ActivityRequest create(@RequestBody ActivityRequest request) {
-        request.setActivityType("emae");
-        request.setDurationInMinutes(20);
-        request.setCaloriesBurned(100);
-        return request;
+//    @PostMapping
+//    public ActivityRequest create(@RequestBody ActivityRequest request) {
+//        request.setActivityType("emae");
+//        request.setDurationInMinutes(20);
+//        request.setCaloriesBurned(100);
+//        return request;
+//    }
+
+    private final ActivityService activityService;
+
+    @Autowired
+    public ActivityController(ActivityService activityService) {
+        this.activityService = activityService;
     }
 
-//    private final ActivityService activityService;
-//
-//    @Autowired
-//    public ActivityController(ActivityService activityService) {
-//        this.activityService = activityService;
-//    }
-//
-//    @PostMapping
-//    public ResponseEntity<String> addActivity(@Validated @RequestBody ActivityRequest request) {
-//        activityService.addActivity(request);
-//        return ResponseEntity.status(HttpStatus.CREATED).body("Activity added successfully");
-//    }
+    @PostMapping
+    public ResponseEntity<String> addActivity(@Validated @RequestBody ActivityRequest request) {
+        activityService.addActivity(request);
+        return ResponseEntity.status(HttpStatus.CREATED).body("Activity added successfully");
+    }
 }
