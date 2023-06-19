@@ -3,13 +3,9 @@ package kollok.demo.request;
 import javax.validation.constraints.NotEmpty;
 
 public class StatsResponse {
-    @NotEmpty
     private int totalCaloriesBurned;
-    @NotEmpty
     private int totalCaloriesConsumed;
-    @NotEmpty
     private int totalPhysicalActivityDuration;
-    @NotEmpty
     private int totalSleepDuration;
 
     public int getTotalCaloriesBurned() {

@@ -1,13 +1,14 @@
 package kollok.demo.request;
 
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Positive;
 
 public class ActivityRequest {
-    @NotEmpty
+    @NotEmpty(message = "Activity must be not empty")
     private String activityType;
-    @NotEmpty
+    @Positive(message = "Time must be a positive number")
     private int durationInMinutes;
-    @NotEmpty
+    @Positive(message = "Calories must be a positive number")
     private int caloriesBurned;
 
 
