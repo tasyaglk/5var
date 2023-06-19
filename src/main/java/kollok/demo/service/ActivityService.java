@@ -11,8 +11,7 @@ public class ActivityService {
         int durationInMinutes = request.getDurationInMinutes();
         int caloriesBurned = request.getCaloriesBurned();
 
-        // Здесь можно добавить логику для обработки данных о физической активности,
-        // например, сохранение в базу данных или выполнение вычислений.
+
         request.setActivityType("emae");
         request.setDurationInMinutes(20);
         request.setCaloriesBurned(100);
