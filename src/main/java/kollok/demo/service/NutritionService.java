@@ -7,5 +7,8 @@ import kollok.demo.request.NutritionRequest;
 public class NutritionService {
 
     public void addNutrition(NutritionRequest request) {
+        request.setDishName("Zapekanka");
+        request.setPortionSize(2);
+        request.setCaloriesConsumed(100);
     }
 }

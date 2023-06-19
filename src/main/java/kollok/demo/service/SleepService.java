@@ -7,5 +7,6 @@ import kollok.demo.request.SleepRequest;
 public class SleepService {
 
     public void addSleep(SleepRequest request) {
+        request.setDuration(5);
     }
 }
